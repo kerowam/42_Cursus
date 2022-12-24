@@ -6,7 +6,7 @@
 #    By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 17:22:51 by gfredes-          #+#    #+#              #
-#    Updated: 2022/12/20 16:12:02 by gfredes-         ###   ########.fr        #
+#    Updated: 2022/12/24 14:32:39 by gfredes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,13 @@ SRC = 	ft_isalpha.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
-		ft_itoa.c
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
 
 CC = gcc -c
 OBJT = $(SRC:.c=.o)

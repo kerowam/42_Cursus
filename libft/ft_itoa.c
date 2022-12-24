@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:54:16 by gfredes-          #+#    #+#             */
-/*   Updated: 2022/12/20 16:17:20 by gfredes-         ###   ########.fr       */
+/*   Updated: 2022/12/23 22:52:26 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (0);
-	str[i] = '\0';
+	str[i--] = '\0';
 	if (ln == 0)
 		str[0] = '0';
 	if (ln < 0)
@@ -56,9 +56,9 @@ char	*ft_itoa(int n)
 	}
 	while (ln > 0)
 	{
-		i--;
 		str[i] = (ln % 10) + '0';
 		ln = ln / 10;
+		i--;
 	}
 	return (str);
 }

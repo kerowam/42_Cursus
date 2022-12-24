@@ -6,13 +6,11 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 13:21:00 by gfredes-          #+#    #+#             */
-/*   Updated: 2022/12/19 19:08:24 by gfredes-         ###   ########.fr       */
+/*   Updated: 2022/12/24 14:53:17 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <unistd.h>
 
 static int	ft_word_split(const char *s, char c)
 {

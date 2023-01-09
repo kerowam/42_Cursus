@@ -6,7 +6,7 @@
 #    By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 17:22:51 by gfredes-          #+#    #+#              #
-#    Updated: 2022/12/24 14:32:39 by gfredes-         ###   ########.fr        #
+#    Updated: 2023/01/09 21:04:47 by gfredes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,8 +48,19 @@ SRC = 	ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 
+SRCBONUS = ft_lstnew_bonus.c \
+		   ft_lstadd_front_bonus.c \
+		   ft_lstsize_bonus.c \
+		   ft_lstlast_bonus.c \
+		   ft_lstadd_back_bonus.c \
+		   ft_lstdelone_bonus.c \
+		   ft_lstclear_bonus.c \
+		   ft_lstiter_bonus.c \
+		   ft_lstmap_bonus.c
+
 CC = gcc -c
 OBJT = $(SRC:.c=.o)
+OBJTBONUS = $(SRCBONUS:.c=.o)
 
 all: $(NAME)
 
@@ -58,14 +69,15 @@ $(NAME):
 	ar rcs $(NAME) $(OBJT)
 
 clean:
-	$(CLEAN) $(OBJT)
+	$(CLEAN) $(OBJT) $(OBJTBONUS)
 
 fclean: clean
 	$(CLEAN) $(NAME)
 
 re: fclean all
 
-exe: all
-	gcc -L. -lft main.c
+bonus:
+	$(CC) $(CFLAGS) $(SRC) $(SRCBONUS)
+	ar rcs $(NAME) $(OBJT) $(OBJTBONUS)
 
-.PHONY: all clean fclean re exe
+.PHONY: all clean fclean re bonus

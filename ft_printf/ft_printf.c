@@ -6,11 +6,18 @@
 /*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:37:44 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/12 16:43:24 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/01/14 21:21:31 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_printf(char const *, ...)
+#include "libftprinf.h"
+
+void? format_printer()
+{
+	
+}
+
+int	ft_printf(char const *str, ...)
 {
     
 }

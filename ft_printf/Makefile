@@ -16,20 +16,18 @@ CFLAGS = -Wall -Wextra -Werror
 
 CLEAN = rm -f
 
-SRC = putchar.c
+SRC = ft_printf.c
+	ft_print_c.c \
+	ft_print_s.c \
+	ft_print_d_i.c
 
 CC = gcc -c
 
 OBJT = $(SRC:.c=.o)
 
-LIBFT_DIR = ./libft
-
-$(LIBFT):
-	make -C $(LIBFT_DIR)
-
 all: $(NAME)
 
-$(NAME): $(LIBFT)
+$(NAME):
 	$(CC) $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJT)
 

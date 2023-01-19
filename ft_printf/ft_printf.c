@@ -12,19 +12,16 @@
 
 #include "libftprinf.h"
 
-void ft_printer(char const *str, void args)
+void ft_printer(char *str, va_list args, size_t *len)
 {
-	str++;
 	if (str == 'c')
-		ft_putchar(*str);
+		ft_print_c(va_arg(arg, char), len);
 	else if (str == 's')
-		ft_putstr(*str);
+		ft_print_s(va_arg(arg, char *), len);
 	else if (str == 'p')
 
-	else if (str == 'd')
-
-	else if (str == 'i')
-		ft_putnbr();???
+	else if (str == 'd' || str == 'i')
+		ft_print_d_i(va_arg(arg, int), len);
 	else if (str == 'u')
 
 	else if (str == 'x')
@@ -32,10 +29,32 @@ void ft_printer(char const *str, void args)
 	else if (str == 'X')
 
 	else if (str == '%')
-		ft_putchar('%');
+		ft_print_c('%');
 }
 
 int	ft_printf(char const *str, ...)
 {
-    
+	va_list	arg;
+	size_t	len;
+
+	len = 0;
+	va_start(arg, str)
+	if(!str)
+	{
+		str = "(null)";
+		va_end(arg);
+	}
+	while(*str)
+	{
+		if(*str == '%')
+		{
+			str++;
+			ft_printer((char *)str, arg, &len)
+		}
+		else
+			ft_print_c(*str, &len);
+		str++;
+	}
+	va_end(arg);
+	return (len);
 }

@@ -19,11 +19,10 @@
 # include <stdio.h>
 # include <stdarg.h>
 
-# include "libft.h"??
 
 int		ft_printf(char const *str, ...);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnbr()??;
+void	ft_print_c(char c, size_t *len);
+void	ft_print_s(char *str, size_t *len);
+void	ft_print_d_i(int nb, size_t *len);
 
 #endif

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libftprinf.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 14:28:40 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/17 19:59:02 by gfredes-         ###   ########.fr       */
+/*   Created: 2023/01/20 20:50:54 by gfredes-          #+#    #+#             */
+/*   Updated: 2023/01/20 20:50:54 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFTPRINF_H
 # define LIBFTPRINF_H
@@ -24,5 +25,9 @@ int		ft_printf(char const *str, ...);
 void	ft_print_c(char c, size_t *len);
 void	ft_print_s(char *str, size_t *len);
 void	ft_print_d_i(int nb, size_t *len);
+void  ft_print_u(int nb, size_t *len);
+void  ft_print_x(unsigned int nb, size_t *len);
+void  ft_print_upx(unsigned int nb, size_t *len);
+void  ft_print_p(unsigned int nb, size_t *len);
 
 #endif

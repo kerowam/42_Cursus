@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_u.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:49:07 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/20 20:49:07 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:51:55 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 
-#include "libftprinf.h"
-
-void  ft_print_u(int nb, size_t *len)
+void	ft_print_u(unsigned int nb, size_t *len)
 {
-  if (nb < 0)
-    nb = -nb;
-  ft_print_d_i(nb, len);
+	if (nb < 0)
+	{
+		nb *= -1;
+	}
+	ft_print_d_i(nb, len);
 }

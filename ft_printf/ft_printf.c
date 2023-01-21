@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:50:36 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/20 20:50:36 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:57:35 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 
-#include "libftprinf.h"
-
-static void ft_printer(char *str, va_list args, size_t *len)
+static void	ft_printer(char str, va_list arg, size_t *len)
 {
 	if (str == 'c')
-		ft_print_c(va_arg(arg, char), len);
+		ft_print_c(va_arg(arg, int), len);
 	else if (str == 's')
 		ft_print_s(va_arg(arg, char *), len);
 	else if (str == 'p')
@@ -24,11 +23,11 @@ static void ft_printer(char *str, va_list args, size_t *len)
 	else if (str == 'd' || str == 'i')
 		ft_print_d_i(va_arg(arg, int), len);
 	else if (str == 'u')
-		ft_print_u(va_arg(arg, int), len);
+		ft_print_u(va_arg(arg, unsigned int), len);
 	else if (str == 'x')
 		ft_print_x(va_arg(arg, unsigned int), len);
 	else if (str == 'X')
-		ft_print_upx(va_arg(arg, unsigned int), len);
+		ft_print_upx(va_arg(arg, unsigned long int), len);
 	else if (str == '%')
 		ft_print_c('%', len);
 }
@@ -39,18 +38,18 @@ int	ft_printf(char const *str, ...)
 	size_t	len;
 
 	len = 0;
-	va_start(arg, str)
-	if(!str)
+	va_start(arg, str);
+	if (!str)
 	{
 		str = "(null)";
 		va_end(arg);
 	}
-	while(*str)
+	while (*str)
 	{
-		if(*str == '%')
+		if (*str == '%')
 		{
 			str++;
-			ft_printer((char *)str, arg, &len)
+			ft_printer(*str, arg, &len);
 		}
 		else
 			ft_print_c(*str, &len);

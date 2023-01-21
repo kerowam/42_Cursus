@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_d_i.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:48:39 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/20 20:48:39 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/01/21 22:48:12 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "libftprinf.h"
+#include "ft_printf.h"
 
 static void	ft_divorprint(int nb, size_t *len)
 {

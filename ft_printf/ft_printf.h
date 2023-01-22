@@ -23,7 +23,7 @@ int		ft_printf(char const *str, ...);
 void	ft_print_c(char c, size_t *len);
 void	ft_print_s(char *str, size_t *len);
 void	ft_print_d_i(int nb, size_t *len);
-void	ft_print_u(unsigned int nb, size_t *len);
+void	ft_print_u(size_t nb, size_t *len);
 void	ft_print_x(unsigned int nb, size_t *len);
 void	ft_print_upx(unsigned int nb, size_t *len);
 void	ft_print_p(unsigned long int nb, size_t *len);

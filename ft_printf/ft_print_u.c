@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_print_u(unsigned int nb, size_t *len)
+void	ft_print_u(size_t nb, size_t *len)
 {
 	ft_print_d_i(nb, len);
 }

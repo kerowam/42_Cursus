@@ -23,7 +23,7 @@ static void	ft_print_px(unsigned long int nb, size_t *len)
 	if (nb == 0)
 	{
 		ft_print_c('0', len);
-		return;
+		return ;
 	}
 	while (nb != 0)
 	{

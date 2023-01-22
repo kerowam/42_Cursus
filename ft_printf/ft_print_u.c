@@ -14,9 +14,5 @@
 
 void	ft_print_u(unsigned int nb, size_t *len)
 {
-	if (nb < 0)
-	{
-		nb *= -1;
-	}
 	ft_print_d_i(nb, len);
 }

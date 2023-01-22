@@ -19,11 +19,11 @@ static void	ft_printer(char str, va_list arg, size_t *len)
 	else if (str == 's')
 		ft_print_s(va_arg(arg, char *), len);
 	else if (str == 'p')
-		ft_print_p(va_arg(arg, unsigned int), len);
+		ft_print_p(va_arg(arg, unsigned long int), len);
 	else if (str == 'd' || str == 'i')
 		ft_print_d_i(va_arg(arg, int), len);
 	else if (str == 'u')
-		ft_print_u(va_arg(arg, unsigned int), len);
+		ft_print_u(va_arg(arg, int), len);
 	else if (str == 'x')
 		ft_print_x(va_arg(arg, unsigned int), len);
 	else if (str == 'X')

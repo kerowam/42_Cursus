@@ -13,7 +13,6 @@
 
 NAME = libftprintf.a
 
-
 SRC = ft_printf.c \
 	ft_print_c.c \
 	ft_print_s.c \
@@ -26,6 +25,7 @@ SRC = ft_printf.c \
 CFLAGS = -Wall -Wextra -Werror
 
 CLEAN = rm -f
+
 CC = gcc -c
 
 OBJT = $(SRC:.c=.o)

@@ -14,5 +14,10 @@
 
 void	ft_print_u(size_t nb, size_t *len)
 {
-	ft_print_d_i(nb, len);
+	if (nb >= 10)
+	{
+		nb = nb / 10;
+		ft_divorprint(nb, len);
+	} else if (nb < 10)
+		ft_print_c(nb % 10 + '0', len);
 }

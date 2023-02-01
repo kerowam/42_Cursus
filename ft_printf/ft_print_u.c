@@ -3,21 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_u.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 20:49:07 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/21 23:51:55 by gfredes-         ###   ########.fr       */
+/*   Created: 2023/02/01 22:44:27 by gfredes-          #+#    #+#             */
+/*   Updated: 2023/02/01 22:57:55 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_u(size_t nb, size_t *len)
+void	ft_print_u(unsigned int nb, size_t *len)
 {
-	if (nb >= 10)
+	long	n;
+
+	n = nb;
+	if (n < 0)
 	{
-		nb = nb / 10;
-		ft_divorprint(nb, len);
-	} else if (nb < 10)
-		ft_print_c(nb % 10 + '0', len);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_print_u(n / 10, len);
+		ft_print_c(n % 10 + '0', len);
+	}
+	else
+		ft_print_c(n % 10 + '0', len);
 }

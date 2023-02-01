@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:50:54 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/21 23:56:44 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/02/01 22:57:25 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_printf(char const *str, ...);
 void	ft_print_c(char c, size_t *len);
 void	ft_print_s(char *str, size_t *len);
 void	ft_print_d_i(int nb, size_t *len);
-void	ft_print_u(size_t nb, size_t *len);
+void	ft_print_u(unsigned int nb, size_t *len);
 void	ft_print_x(unsigned int nb, size_t *len);
 void	ft_print_upx(unsigned int nb, size_t *len);
 void	ft_print_p(unsigned long int nb, size_t *len);

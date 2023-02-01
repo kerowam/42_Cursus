@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 20:50:36 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/01/21 23:57:35 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/02/01 23:08:46 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	ft_printer(char str, va_list arg, size_t *len)
 	else if (str == 'd' || str == 'i')
 		ft_print_d_i(va_arg(arg, int), len);
 	else if (str == 'u')
-		ft_print_u(va_arg(arg, int), len);
+		ft_print_u(va_arg(arg, unsigned int), len);
 	else if (str == 'x')
 		ft_print_x(va_arg(arg, unsigned int), len);
 	else if (str == 'X')
@@ -44,6 +44,8 @@ int	ft_printf(char const *str, ...)
 		str = "(null)";
 		va_end(arg);
 	}
+	if ((write (1, "", 0) == -1))
+		return (-1);
 	while (*str)
 	{
 		if (*str == '%')

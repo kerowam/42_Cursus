@@ -3,13 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gfredes- <gfredes-@student.42.fr>          +#+  +:+       +#+         #
+#    By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 20:51:11 by gfredes-          #+#    #+#              #
-#    Updated: 2023/01/21 22:16:59 by gfredes-         ###   ########.fr        #
+#    Updated: 2023/02/01 23:01:22 by gfredes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME = libftprintf.a
 

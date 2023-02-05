@@ -460,4 +460,16 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
+/**
+ * @brief Writes output to the stdout stream, under control of the argument str.
+ *
+ * @param str: A string that controls the format of the output, as described.
+ * The formatting string determines what additional arguments you need
+ * to provide.
+ * @param ...: The arguments to be printed.
+ * @return int: The number of characters written, excluding the terminating NUL,
+ * or a negative number if an error occurred.
+ */
+int ft_printf(char const *str, ...);
+
 #endif

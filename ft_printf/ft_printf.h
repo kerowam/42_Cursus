@@ -19,6 +19,16 @@
 # include <stdio.h>
 # include <stdarg.h>
 
+/**
+ * @brief Writes output to the stdout stream, under control of the argument str.
+ *
+ * @param str: A string that controls the format of the output, as described.
+ * The formatting string determines what additional arguments you need
+ * to provide.
+ * @param ...: The arguments to be printed.
+ * @return int: The number of characters written, excluding the terminating NUL, 
+ * or a negative number if an error occurred.
+ */
 int		ft_printf(char const *str, ...);
 void	ft_print_c(char c, size_t *len);
 void	ft_print_s(char *str, size_t *len);

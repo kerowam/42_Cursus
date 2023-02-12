@@ -26,7 +26,7 @@ static char	make_line(char *stack)
 			i++;
 		line = malloc(sizeof(char) * (i + 1));
 		if (!line)
-			return (NULL);
+			return ('\0');
 		i = 0;
 		while (stack[i] != '\n' && stack[i] != '\0')
 		{
@@ -36,27 +36,27 @@ static char	make_line(char *stack)
 		if (stack[i] == '\n')
 			line[i++] = '\n';
 		line[i] = '\0';
-		return (line);
+		return (*line);
 	}
-	return (NULL);
+	return ('\0');
 }
 
 static char	update_stack(char *stack)
 {
 	char	*aux;
 	char	*ptr;
-	int		i;
+	int	i;
 
 	ptr = ft_strchr(stack, '\n');
 	if (!ptr)
 	{
 		free(stack);
-		return (NULL);
+		return ('\0');
 	}
 	ptr++;
 	aux = malloc(sizeof(char) * (ft_strlen(ptr) + 1));
 	if (!aux)
-		return (NULL);
+		return ('\0');
 	i = 0;
 	while (*ptr != '\0')
 	{
@@ -66,7 +66,7 @@ static char	update_stack(char *stack)
 	}
 	aux[i] = '\0';
 	free(stack);
-	return (aux);
+	return (*aux);
 }
 
 char	*get_next_line(int fd)
@@ -74,11 +74,12 @@ char	*get_next_line(int fd)
 	static char	*stack;
 	char		buffer[BUFFER_SIZE + 1];
 	char		*line;
-	size_t		readbytes;
+	int		readbytes;
 
-	stack = NULL;
+	stack = '\0';
+	line = '\0';
 	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
+		return ('\0');
 	readbytes = 1;
 	while (!ft_strchr(stack, '\n') && readbytes > 0)
 	{
@@ -86,12 +87,12 @@ char	*get_next_line(int fd)
 		if (readbytes < 0)
 		{
 			free(stack);
-			return (NULL);
+			return ('\0');
 		}
 		buffer[readbytes] = '\0';
 		stack = ft_strjoin(stack, buffer);
 	}
-	line = make_line(stack);
-	stack = update_stack(stack);
+	*line = make_line(stack);
+	*stack = update_stack(stack);
 	return (line);
 }

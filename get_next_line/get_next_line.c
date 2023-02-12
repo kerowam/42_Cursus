@@ -45,7 +45,7 @@ static char	update_stack(char *stack)
 {
 	char	*aux;
 	char	*ptr;
-	int	i;
+	int		i;
 
 	ptr = ft_strchr(stack, '\n');
 	if (!ptr)
@@ -74,7 +74,7 @@ char	*get_next_line(int fd)
 	static char	*stack;
 	char		buffer[BUFFER_SIZE + 1];
 	char		*line;
-	int		readbytes;
+	int			readbytes;
 
 	stack = '\0';
 	line = '\0';

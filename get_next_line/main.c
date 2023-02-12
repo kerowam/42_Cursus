@@ -1,19 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
 int	main(void)
 {
 	int fd;
-	int ret;
-	char *line;
 
 	if ((fd = open("main.c", O_RDONLY)) < 3 && fd != 0)
 		return (-1);
 	printf("%d\n", fd);
-	ret = get_next_line(fd, &line);
-	printf("%d - %s\n", ret, line);
-	ret = get_next_line(fd, &line);
-	printf("%d - %s\n", ret, line);
-	ret = get_next_line(fd, &line);
-	printf("%d - %s\n", ret, line);
-	ret = get_next_line(fd, &line);
-	printf("%d - %s\n", ret, line);
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
 	return (0);
 }

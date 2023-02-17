@@ -6,12 +6,15 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:44:03 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/02/09 23:05:49 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/02/17 20:39:06 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include <string.h>
 # include <stdlib.h>

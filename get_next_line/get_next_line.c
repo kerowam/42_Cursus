@@ -34,7 +34,10 @@ static char	make_line(char *stack)
 			i++;
 		}
 		if (stack[i] == '\n')
-			line[i++] = '\n';
+			{
+				line[i] = '\n';
+				i++;
+			}
 		line[i] = '\0';
 		return (*line);
 	}
@@ -85,14 +88,11 @@ char	*get_next_line(int fd)
 	{
 		readbytes = read(fd, buffer, BUFFER_SIZE);
 		if (readbytes < 0)
-		{
-			free(stack);
-			return ('\0');
-		}
+			return (free(stack), '\0');
 		buffer[readbytes] = '\0';
 		stack = ft_strjoin(stack, buffer);
 	}
-	*line = make_line(stack);
-	*stack = update_stack(stack);
+	line = make_line(stack);
+	stack = update_stack(stack);
 	return (line);
 }

@@ -42,6 +42,6 @@ bonus:
 	ar rcs $(NAME) $(OBJT) $(OBJTBONUS)
 
 exe: all
-	gcc -L. -lftprintf main.c
+	gcc -L. -lgetnextline main.c
 
 .PHONY: all clean fclean re bonus exe

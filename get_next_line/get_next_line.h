@@ -26,5 +26,6 @@ char 		*update_stack(char *stack);
 char 		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strchr(char *s, int c);
 size_t	ft_strlen(const char *s);
+char *ft_strdup(const char *s1);
 
 #endif

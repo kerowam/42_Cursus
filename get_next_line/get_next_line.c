@@ -88,6 +88,9 @@ char	*get_next_line(int fd)
 		if (reader < 0)
 			return (free(stack), '\0');
 		buffer[reader] = '\0';
+		if (!stack)
+			stack = ft_strdup(buffer);
+		else
 		stack = ft_strjoin(stack, buffer);
 	}
 	line = make_line(stack);

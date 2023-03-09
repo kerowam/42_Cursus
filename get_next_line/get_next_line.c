@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:43:39 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/02/09 23:22:40 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/09 20:47:20 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*make_line(char *stack)
 	int		i;
 
 	if (!*stack)
-		return ('\0');
+		return (NULL);
 	i = 0;
 	while (stack[i] != '\n' && stack[i] != '\0')
 		i++;
@@ -26,7 +26,7 @@ char	*make_line(char *stack)
 		i++;
 	line = malloc(sizeof(char) * (i + 1));
 	if (!line)
-		return ('\0');
+		return (NULL);
 	i = 0;
 	while (stack[i] != '\n' && stack[i] != '\0')
 	{
@@ -52,12 +52,12 @@ char	*update_stack(char *stack)
 	if (!ptr)
 	{
 		free(stack);
-		return ('\0');
+		return (NULL);
 	}
 	ptr++;
 	aux = malloc(sizeof(char) * (ft_strlen(ptr) + 1));
 	if (!aux)
-		return ('\0');
+		return (NULL);
 	i = 0;
 	while (*ptr != '\0')
 	{
@@ -77,16 +77,16 @@ char	*get_next_line(int fd)
 	char		*line;
 	int			reader;
 
-	stack = '\0';
-	line = '\0';
+	stack = NULL;
+	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
-		return ('\0');
+		return (NULL);
 	reader = 1;
-	while (!(ft_strchr(stack, '\n'))  && reader > 0)
+	while (!(ft_strchr(stack, '\n')) && reader > 0)
 	{
 		reader = read(fd, buffer, BUFFER_SIZE);
 		if (reader < 0)
-			return (free(stack), '\0');
+			return (free(stack), NULL);
 		buffer[reader] = '\0';
 		if (!stack)
 			stack = ft_strdup(buffer);

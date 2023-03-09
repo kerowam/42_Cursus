@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:44:03 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/02/17 20:39:06 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/09 20:50:39 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 # include <unistd.h>
 
 char		*get_next_line(int fd);
-char 		*make_line(char *stack);
-char 		*update_stack(char *stack);
-char 		*ft_strjoin(const char *s1, const char *s2);
+char		*make_line(char *stack);
+char		*update_stack(char *stack);
+char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strchr(char *s, int c);
-size_t	ft_strlen(const char *s);
-char *ft_strdup(const char *s1);
+size_t		ft_strlen(const char *s);
+char		*ft_strdup(const char *s1);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:44:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/02/09 23:19:58 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/09 20:51:24 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ size_t	ft_strlen(const char *s)
 	return (c);
 }
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	char *ptr;
-	int i;
+	char	*ptr;
+	int		i;
 
 	ptr = (char *)malloc(ft_strlen(s1) + 1);
 	i = 0;

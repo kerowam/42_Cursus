@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:43:39 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/11 15:06:49 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/11 20:03:50 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ char	*get_next_line(int fd)
 	line = NULL;
 	if (!stack)
 		stack = malloc(sizeof(char) * 1);
+	if (!stack)
+		return (NULL);
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	reader = 1;

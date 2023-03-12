@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:43:39 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/12 14:44:21 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:19:36 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,19 +67,17 @@ char	*update_stack(char *stack)
 	return (aux);
 }
 
-char	*get_next_line(int fd)
+char	*ft_reader(int fd, char *stack)
 {
-	static char	*stack;
-	char		buffer[BUFFER_SIZE + 1];
-	char		*line;
-	int			reader;
+	char	*buffer;
+	int		reader;
 
-	line = NULL;
 	if (!stack)
 		stack = malloc(sizeof(char) * 1);
 	if (!stack)
 		return (NULL);
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buffer)
 		return (NULL);
 	reader = 1;
 	while (!(ft_strchr(stack, '\n')) && reader > 0)
@@ -93,6 +91,21 @@ char	*get_next_line(int fd)
 		else
 		stack = ft_strjoin(stack, buffer);
 	}
+	free(buffer);
+	return (stack);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*stack;
+	char		*line;
+
+	line = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	stack = ft_reader(fd, stack);
+	if (!stack)
+		return (NULL);
 	line = make_line(stack);
 	stack = update_stack(stack);
 	return (line);

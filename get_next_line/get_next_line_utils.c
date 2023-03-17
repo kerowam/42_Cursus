@@ -6,13 +6,14 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:44:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/11 14:43:23 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/17 21:43:12 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -35,6 +36,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		j++;
 	}
 	str[i] = '\0';
+	free(s1);
 	return (str);
 }
 

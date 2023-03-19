@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_printadress.c                        :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:43:39 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/17 21:48:30 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/19 23:28:08 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	*ft_reader(int fd, char *stack)
 	{
 		reader = read(fd, buffer, BUFFER_SIZE);
 		if (reader < 0)
-			return (free(stack), NULL);
+			return (free(stack), free(buffer), NULL);
 		buffer[reader] = '\0';
 		if (!stack)
 			stack = ft_strdup(buffer);

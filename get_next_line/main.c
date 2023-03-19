@@ -10,15 +10,21 @@ void check_leaks(void)
 
 int	main(void)
 {
-	int fd;
-	char *line;
+	int 	fd;
+	char 	*line;
+	int 	i;
 
-	if ((fd = open("infile", O_RDONLY)) < 3 && fd != 0)
+	i = 0;
+	if ((fd = open("42_with_nl", O_RDONLY)) < 3 && fd != 0)
 		return (-1);
 	printf("%d\n", fd);
+	while (i < 3)
+	{
 		line = get_next_line(fd);
 		printf("%s\n", line);
-		free(line);
+		i++;
+	}
+	free(line);
 	//while (get_next_line(fd))
 	//	printf("%s\n", get_next_line(fd));
 	close(fd);

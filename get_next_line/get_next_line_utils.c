@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:44:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/17 21:43:12 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/19 23:58:30 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	size_t	j;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (0);
 	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (0);
@@ -75,20 +77,23 @@ size_t	ft_strlen(const char *s)
 	return (c);
 }
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *s1)
 {
 	char	*ptr;
 	int		i;
 
+	if (!s1)
+		return (NULL);
 	ptr = (char *)malloc(ft_strlen(s1) + 1);
 	i = 0;
 	if (!ptr)
-		return (0);
+		return (NULL);
 	while (s1[i] != '\0')
 	{
 		ptr[i] = s1[i];
 		i++;
 	}
 	ptr[i] = '\0';
+	free(s1);
 	return (ptr);
 }

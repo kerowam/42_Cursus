@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:43:39 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/20 00:38:41 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/29 21:00:30 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*ft_reader(int fd, char *stack)
 	int		reader;
 
 	if (!stack)
-		stack = malloc(sizeof(char) * 1);
+				stack = calloc(1, sizeof(char));
 	if (!stack)
 		return (NULL);
 	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));

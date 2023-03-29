@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:44:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/19 23:58:30 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/29 21:02:59 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,24 @@ char	*ft_strdup(char *s1)
 	}
 	ptr[i] = '\0';
 	free(s1);
+	return (ptr);
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	void			*ptr;
+	size_t			len;
+	unsigned char	*dst;
+
+	len = 0;
+	ptr = malloc(len * size);
+	if (!ptr)
+		return (0);
+	dst = (unsigned char *) ptr;
+	while (len < size)
+	{	
+		dst[len] = (unsigned char) 0;
+		count++;
+	}
 	return (ptr);
 }

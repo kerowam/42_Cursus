@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 22:14:01 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/03/29 22:18:24 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/03/31 23:55:46 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,21 +97,21 @@ char	*ft_reader(int fd, char *stack)
 
 char	*get_next_line(int fd)
 {
-	static char	*stack;
+	static char	*stack[4096];
 	char		*line;
 
 	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 	{
-		if (stack)
-			free(stack);
-			stack = NULL;
+		if (stack[fd])
+			free(stack[fd]);
+			stack[fd] = NULL;
 		return (NULL);
 	}
-	stack = ft_reader(fd, stack);
-	if (!stack)
+	stack[fd] = ft_reader(fd, stack[fd]);
+	if (!stack[fd])
 		return (NULL);
-	line = make_line(stack);
-	stack = update_stack(stack);
+	line = make_line(stack[fd]);
+	stack[fd] = update_stack(stack[fd]);
 	return (line);
 }

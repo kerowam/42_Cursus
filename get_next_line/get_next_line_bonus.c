@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 22:14:01 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/04/01 22:37:45 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/04/02 23:31:41 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char	*ft_reader(int fd, char *stack)
 	while (!(ft_strchr(stack, '\n')) && reader > 0)
 	{
 		reader = read(fd, buffer, BUFFER_SIZE);
-		if (reader == -1 || *buffer == '\0')
+		if (reader == -1)
 			return (free(stack), free(buffer), NULL);
 		buffer[reader] = '\0';
 		if (!stack)

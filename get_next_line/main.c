@@ -10,7 +10,7 @@
 int	main(void)
 {
 	int		fd[4];
-	char	ret;
+	char	*ret;
 
 	fd[0] = open("41_with_nl", O_RDWR);
 	fd[1] = open("42_with_nl", O_RDWR);

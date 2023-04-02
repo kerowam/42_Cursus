@@ -104,8 +104,10 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 	{
 		if (stack)
+		{
 			free(stack);
 			stack = NULL;
+		}
 		return (NULL);
 	}
 	stack = ft_reader(fd, stack);

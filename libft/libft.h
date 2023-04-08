@@ -12,10 +12,14 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 /**
  * @brief Checks if the character is an alphabetic character.
@@ -470,6 +474,15 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
  * @return int: The number of characters written, excluding the terminating NUL,
  * or a negative number if an error occurred.
  */
-int ft_printf(char const *str, ...);
+int					ft_printf(char const *str, ...);
+
+/**
+ * @brief Devuelve la línea leída de un file descriptor
+ *
+ * @param fd: File descriptor del que leer
+ * @return Si todo va bien: la línea leída. 
+ * En caso de fallo o si la lectura termina: NULL
+ */
+char				*get_next_line(int fd);
 
 #endif

@@ -10,10 +10,11 @@
 
 ## Proyectos
 
-ft_libft --> 125/100
-ft_printf --> 100/100
-Get_next_line --> 125/100
-Born to Be Root --> 125/100
+- **ft_libft** --> 125/100
+- **ft_printf** --> 100/100
+- **Get_next_line** --> 125/100
+- **Born to Be Root** --> 125/100
+
 
 
 

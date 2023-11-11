@@ -4,3 +4,6 @@
 [submodule "Cercle_2/Exam_Rank_02"]
 	path = Cercle_2/Exam_Rank_02
 	url = https://github.com/kerowam/Exam_Rank_02.git
+[submodule "Cercle_2/Minitalk"]
+	path = Cercle_2/Minitalk
+	url = https://github.com/kerowam/Minitalk.git

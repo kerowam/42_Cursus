@@ -1,4 +1,4 @@
-![Header](https://github.com/kerowam/42_Cursus/assets/105356789/04e1dced-f29d-41c4-9dcd-eafb2e3cf499)
+!/[Header](https://github.com/kerowam/42_Cursus/assets/105356789/04e1dced-f29d-41c4-9dcd-eafb2e3cf499)
 
 # 42_Cursus
 
@@ -10,12 +10,25 @@
 
 ## Proyectos
 
-- **ft_libft** --> 125/100
-- **ft_printf** --> 100/100
-- **Get_next_line** --> 125/100
-- **Born to Be Root** --> 125/100
+Cercle_0
+- **ft_libft** -->  125/125
 
+Cercle_1
+- **ft_printf** -->  100/125
+- **Get_next_line** -->  125/125
+- **Born to Be Root** -->  125/125
 
+Cercle_2
+- **Push_swap** -->  96/125
+- **Minitalk** -->  125/125
+- **Fdf** -->  125/125
+
+Cercle_3
+- **Minishell** -->  101/125
+- **Philosophers** -->  100/125
+
+Cercle_4
+- **NetPractice** -->  100/100
 
 
 ## Contacto

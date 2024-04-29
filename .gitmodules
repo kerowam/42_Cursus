@@ -7,3 +7,6 @@
 [submodule "Cercle_2/Minitalk"]
 	path = Cercle_2/Minitalk
 	url = https://github.com/kerowam/Minitalk.git
+[submodule "Cercle_2/Fdf"]
+	path = Cercle_2/Fdf
+	url = git@github.com:kerowam/Fdf.git

@@ -13,3 +13,6 @@
 [submodule "Cercle_3/minishell"]
 	path = Cercle_3/minishell
 	url = git@github.com:kerowam/minishell.git
+[submodule "Cercle_3/Philosophers"]
+	path = Cercle_3/Philosophers
+	url = git@github.com:kerowam/Philosophers.git

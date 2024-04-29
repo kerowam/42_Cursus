@@ -10,3 +10,6 @@
 [submodule "Cercle_2/Fdf"]
 	path = Cercle_2/Fdf
 	url = git@github.com:kerowam/Fdf.git
+[submodule "Cercle_3/minishell"]
+	path = Cercle_3/minishell
+	url = git@github.com:kerowam/minishell.git

@@ -16,3 +16,6 @@
 [submodule "Cercle_3/Philosophers"]
 	path = Cercle_3/Philosophers
 	url = git@github.com:kerowam/Philosophers.git
+[submodule "Cercle_4/NetPractice"]
+	path = Cercle_4/NetPractice
+	url = git@github.com:kerowam/NetPractice.git

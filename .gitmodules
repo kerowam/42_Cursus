@@ -25,3 +25,6 @@
 [submodule "Cercle_4/CPP-Modules"]
 	path = Cercle_4/CPP-Modules
 	url = https://github.com/kerowam/CPP-Modules.git
+[submodule "Cercle_5/CPP-Modules"]
+	path = Cercle_5/CPP-Modules
+	url = https://github.com/kerowam/CPP-Modules.git

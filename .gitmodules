@@ -19,3 +19,6 @@
 [submodule "Cercle_4/NetPractice"]
 	path = Cercle_4/NetPractice
 	url = git@github.com:kerowam/NetPractice.git
+[submodule "Cercle_4/cub3D"]
+	path = Cercle_4/cub3D
+	url = https://github.com/kerowam/cub3D.git

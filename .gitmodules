@@ -22,3 +22,6 @@
 [submodule "Cercle_4/cub3D"]
 	path = Cercle_4/cub3D
 	url = https://github.com/kerowam/cub3D.git
+[submodule "Cercle_4/CPP-Modules"]
+	path = Cercle_4/CPP-Modules
+	url = https://github.com/kerowam/CPP-Modules.git

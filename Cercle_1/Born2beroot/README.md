@@ -11,6 +11,8 @@
 
 **Born2beRoot** es un proyecto del currículo de 42 School que introduce conceptos fundamentales sobre administración de sistemas. El objetivo principal es configurar un servidor virtual seguro y funcional utilizando Debian o CentOS, mientras se respetan estrictos requisitos de seguridad.
 
+Este es el [subject](es.subject.pdf) del proyecto. 
+
 ---
 
 ## 📋 Tabla de Contenidos
